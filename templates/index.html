@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <header>
+        <h1 id="htext">Concursos</h1>
+    </header>
+
+    <main>
+        <p>
+            <label>COLÉGIOS FEDERAIS</label><br>
+            <select id="escolha_federal">
+                <option>-</option>
+                <option value="cefet">CEFET</option>
+                <option value="pedro2">Pedro II</option>
+                <option value="ifrj">IFRJ</option>
+                <option value="fiocruz">Fio Cruz</option>
+                <option value="ufrj">CAP UFRJ</option>
+
+            </select>
+        </p>
+
+        <p>
+            <label>COLÉGIOS MILITARES</label><br>
+            <select id="escolha_militar">
+                <option>-</option>
+                <option value="cmrj">Colégio Militar do Rio de Janeiro</option>
+                <option value="cbnb">Colégio Brigadeiro Newton Braga</option>
+                <option value="naval">Colégio Naval do Rio de Janeiro</option>
+            </select>
+        </p>
+
+        <p>
+            <label>COLÉGIOS ESTADUAIS</label><br>
+            <select id="escolha_estadual">
+                <option>-</option>
+            </select>
+        </p>
+
+        <p>
+            <label>COLÉGIOS PARTICULARES</label><br>
+            <select id="escolha_particular">
+                <option>-</option>
+            </select>
+        </p>
+
+        <p>
+            <label>OUTROS</label><br>
+            <select id="escolha_outros">
+                <option>-</option>
+            </select>
+        </p>
+
+    </main>
+
+    <script>
+        document.getElementById("escolha_federal").addEventListener("change", function () {
+            var escolha = this.value;
+            
+            switch (escolha) {
+                case "cefet":
+                    window.location.href = "/cefet";
+                    break;
+
+                case "pedro2":
+                    window.location.href = "/pedro2";
+                    break;
+
+                case "ifrj":
+                    window.location.href = "/ifrj";
+                    break;
+                
+                case "fiocruz":
+                    window.location.href = "/fiocruz";
+                    break;
+
+                case "ufrj":
+                    window.location.href = "/ufrj";
+                    break;
+                
+                default:
+                    break;
+            }
+        });
+
+        document.getElementById("escolha_militar").addEventListener("change", function (){
+            var escolha = this.value;
+
+            switch (escolha) {
+                case "cmrj":
+                    window.location.href = "/cmrj"
+                    break;
+                    
+                case "cbnb":
+                    window.location.href = "/cbnb"
+                    break;
+
+                case "naval":
+                    window.location.href = "/naval"
+                    break;
+                
+                default:
+                    break;
+
+            }
+        });
+
+    </script>
+    
+</body>
+</html>
